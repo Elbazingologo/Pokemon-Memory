@@ -1,0 +1,104 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+    <script defer src="dificultad_bot.js"></script>
+    <link href="Proyecto.css" rel="stylesheet">   
+    <link rel="icon" href="icon/icon.png">
+    <title>Pokemon Memory </title>
+</head>
+<body>
+    <div id="bg">
+
+    </div>
+    <div class="content">
+        <div id="menu">
+
+            <div id="logo">
+                <img class="img" src="logo/logo.png" draggable="false"/>
+            </div>
+
+            <div class="button-container">       
+                <button onclick="showOptionsPVE(), showBoardOptions()" class="menu-button single-player">
+                <span> PLAYER VS BOT </span>
+                </button>
+    
+                <button onclick="showOptionsPVP(), showBoardOptions()" class="menu-button multi-player">
+                    <span> PLAYER VS PLAYER </span>
+                </button>
+    
+                <button onclick="showOptionsPractice(), showBoardOptions()"class="menu-button practice">
+                    <span> PRACTICE </span>
+                </button>
+                <div class="options-pve hidden">
+                    <div class="options">
+                        <div class="board-size" onmouseleave="onMouseLeaveBoard()">
+                            <p >Board Size</p>
+                            <p> </p>
+                        </div>
+                        <div class="bot-difficulty none">
+                            <p>Difficulty</p>
+                            <button onclick="easyDifficulty()" class="easy dificulty-selected">Easy</button>
+                            <button onclick="mediumDifficulty()" class="medium">Normal</button>
+                            <button onclick="hardDifficulty()" class="hard">Hard</button>
+                            <button onclick="veryHardDifficulty()" class="very-hard">VeryHard </button>
+                            <button onclick="darkSoulsDifficulty()" class="dark-souls">DarkSouls </button>
+                        </div>
+                        <div class="multy-player none">
+                            <p> Number of Players</p>
+                            <button onclick="twoPlayers()" class="two-players">2 Player</button>
+                            <button onclick="threePlayers()" class="three-players">3 Player</button>
+                            <button onclick="fourPlayers()" class="four-players">4 Player</button>
+                        </div>
+                    </div>
+                    <button onclick="startGame()" class="pve-button start-bot-game">
+                        <span>START GAME</span>
+                    </button>
+                    <button onclick="showMenu()" Class="pve-button go-back">
+                        <span>BACK</span>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    
+    <div class="game hidden">
+    </div>
+    <div class="game-buttons none">
+    <button onclick="showMenu()" class="game-to-menu ">Go to Menu</button>
+    <button onclick="startGame()"class="game-restart ">Restart</button>
+    </div>
+    <div class="result hidden">
+        <div class="final"></div>
+        <button onclick="seeBoard()" class="see-board">See board</button>
+    </div>
+    <div>
+        <div class="player-indicator vs-bot hidden">
+            <button class="button bot-score indicator-button" style="width: 60px; height: 60px;"></button>
+            <p>x0</p>
+        </div>
+        <div class="player-indicator one hidden">
+            <button class="button one-score indicator-button" style="width: 60px; height: 60px;"></button>
+            <p>x0</p>
+        </div>
+        <div class="player-indicator two hidden">
+            <button class="button two-score indicator-button" style="width: 60px; height: 60px;"></button>
+            <p>x0</p>
+        </div>
+        <div class="player-indicator three hidden">
+            <button class="button three-score indicator-button" style="width: 60px; height: 60px;"></button>
+            <p>x0</p>
+        </div>
+        <div class="player-indicator four hidden">
+            <button class="button four-score indicator-button" style="width: 60px; height: 60px;"></button>
+            <p>x0</p>
+        </div>
+        <div class="banner hidden">
+            <p>SCORE</p>
+        </div>
+    </div>
+</body>
+</html>
