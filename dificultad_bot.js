@@ -126,9 +126,9 @@ function boardSize(width, height) {
 function loadImages (elementNumbers) {
     var selectedImage = []
     for (var i = 0; i < elementNumbers; i++) {
-        var x = (getRandomInt(856)+1)
+        var x = (getRandomInt(100)+1)
         while(selectedImage.includes(x)){
-            x = (getRandomInt(856)+1)
+            x = (getRandomInt(100)+1)
         }
         var image = `elementos/poke (${x}).png`
         var img=new Image();
